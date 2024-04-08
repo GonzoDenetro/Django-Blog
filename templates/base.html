@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    <script src="{% static 'js/app.js' %}" defer></script>
+    <title>{% if title%} {{title}} {%else%} Blog {% endif %} </title>
+</head>
+<body>
+    <header>
+
+        {% if request.user.is_authenticated %}
+        <div class="nav-left">
+            <a href="{% url 'posts' %}">My Posts</a>
+            <a href="{% url 'post-create' %}">New Post</a>
+        </div>
+        
+        
+        <div class="nav-right">
+            <span class="user-name-span"> Hi {{ request.user.username}} </span>
+            <a href="{% url 'logout' %}" class="nav-link"> Logout</a>
+        </div>
+
+       
+
+        {% else %}
+        <div class="nav-right">
+            <a href="{% url 'login' %}" style="margin-left: 20px;" class="nav-link">Login</a>
+            <a href="{% url 'register' %}" style="margin-left: 20px;" class="nav-link">Register</a>
+        </div>
+        
+        {% endif %} 
+
+    </header>
+
+    {% if messages %}
+        <div class="div-messages">
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}"{% endif %}>
+                {{message}}
+            </div>
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    {% block content%}
+    
+    {% endblock %}
+</body>
+</html>

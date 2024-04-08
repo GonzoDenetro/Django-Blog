@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{%block content%}
+    <h2 class="form-title"> {% if id %} Edit {% else %} New {% endif %} Post</h2>
+    <form method="post" novalidate class="post-form">
+        {% csrf_token %} <!--Es un token de seguridad para autenticar al usuario \-->
+        {{form.as_p}} <!-- Se va a renderizar el formulario en <p> \-->
+        <input type="submit" value="Save" class="submit-btn"/>
+    </form>
+{%endblock%}

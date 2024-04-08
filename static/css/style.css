@@ -1,0 +1,203 @@
+/* Estilos para el Encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a, .nav-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.user-name-span {
+	margin-right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+}
+
+
+/* Estilos Globales */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el Encabezado */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para los Contenedores de Publicaciones */
+div.post-container {
+    background-color: #262626;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los Títulos de Publicaciones */
+h2.post-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los Detalles de Publicaciones */
+small.post-details {
+    display: block;
+    color: #808080;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el Contenido de Publicaciones */
+p.post-content {
+    line-height: 1.5;
+}
+
+/* Estilos para los Enlaces de Edición y Eliminación */
+a.edit-link, a.delete-link {
+    color: #1e90ff;
+    margin-right: 10px;
+}
+
+.errorlist {
+	padding:0;
+	margin:0;
+}
+.errorlist li{
+	color:red;
+	list-style:none;
+}
+
+.alert{
+	padding:0.5rem;	
+}
+
+.alert-success{
+	background-color: rgba(47, 202, 47, 0.859)
+}
+.alert-error{
+	background-color:#ba2121;
+	color:#fff;
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+    div.post-container {
+        padding: 10px;
+    }
+    h2.post-title {
+        font-size: 1.2em;
+    }
+}
+
+/* Estilos para el formulario de login */
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #808080;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el formulario de edición de posts */
+.post-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
